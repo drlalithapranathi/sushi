@@ -346,7 +346,7 @@ export class CodeSystemExporter {
 
   exportCodeSystem(fshDefinition: FshCodeSystem): CodeSystem {
     return this.fisher.inVersionScopeOf(
-      artifactScopeKey('CodeSystem', fshDefinition.id, this.tank.config.canonical),
+      artifactScopeKey('CodeSystem', fshDefinition, this.tank.config.canonical),
       () => this.doExportCodeSystem(fshDefinition)
     );
   }
